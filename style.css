@@ -1,0 +1,117 @@
+:root {
+  --maroon: #8B1E3F;
+  --gold: #D4AF37;
+  --krem: #fdf6f0;
+}
+
+body { 
+  font-family: 'Poppins', sans-serif; 
+  margin: 0; 
+  overflow-x: hidden; 
+  background: var(--krem);
+}
+h1, h2, h3, h4 { font-family: 'Great Vibes', cursive; color: var(--maroon); }
+
+/* FRAME BUNGA */
+.frame-kiri, .frame-kanan {
+  position: fixed; top: 0; height: 100vh; width: 120px; z-index: 999;
+  background-size: contain; background-repeat: no-repeat;
+  pointer-events: none;
+}
+.frame-kiri { left: 0; background-image: url('assets/frame-kiri.png'); background-position: left; }
+.frame-kanan { right: 0; background-image: url('assets/frame-kanan.png'); background-position: right; }
+
+/* COVER */
+.cover {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/foto-cover.jpg') center/cover;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 1.2s ease-in-out; z-index: 9999;
+}
+.cover.hide { transform: translateY(-100%); }
+.cover h1 { font-size: 5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+.subjudul { letter-spacing: 5px; text-transform: uppercase; }
+.btn-buka {
+  background: var(--gold); color: white; border: 2px solid white;
+  padding: 14px 45px; border-radius: 50px; font-size: 18px;
+  transition: 0.3s;
+}
+.btn-buka:hover { background: white; color: var(--gold); }
+
+/* KONTEN */
+.konten { display: none; padding: 0 20px 50px; }
+.konten.show { display: block; }
+
+/* COUNTDOWN */
+.box-countdown {
+  background: white; padding: 25px 10px; border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(139, 30, 63, 0.1); margin: 5px;
+}
+.box-countdown h4 { font-size: 2.5rem; font-weight: 700; margin: 0; }
+
+/* FOTO BULAT */
+.foto-bulat {
+  width: 180px; height: 180px; border-radius: 50%;
+  border: 6px solid var(--gold); object-fit: cover; margin-bottom: 20px;
+}
+
+/* CARD ACARA */
+.card-acara {
+  background: white; border-radius: 25px; border-top: 4px solid var(--gold);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+.btn-maps {
+  background: var(--maroon); color: white; padding: 10px 25px;
+  border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 10px;
+}
+
+/* SWIPER GALLERY */
+.swiper { width: 100%; padding: 20px 0; }
+.swiper-slide img { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; }
+
+/* TIMELINE */
+.timeline { border-left: 3px solid var(--gold); padding-left: 30px; }
+.timeline-item { margin-bottom: 40px; }
+
+/* AMPLOR */
+.card-rekening {
+  background: white; padding: 30px; border-radius: 20px; max-width: 350px;
+  border: 2px dashed var(--gold);
+}
+.btn-copy {
+  background: var(--maroon); color: white; border: none;
+  padding: 10px 25px; border-radius: 50px; margin-top: 10px;
+}
+
+/* RSVP */
+.card-form {
+  background: white; border-radius: 20px; max-width: 500px; margin: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+.card-form input, .card-form select, .card-form textarea {
+  width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 10px;
+}
+.card-form button {
+  width: 100%; background: var(--gold); color: white; border: none;
+  padding: 12px; border-radius: 10px; font-weight: 600;
+}
+
+/* FOOTER */
+.footer { background: var(--maroon); color: var(--krem); }
+.footer h3 { color: var(--gold); font-size: 3rem; }
+
+/* KUPU2 */
+.kupu {
+  position: fixed; top: -50px; z-index: 998; font-size: 24px;
+  animation: jatuh linear infinite;
+}
+@keyframes jatuh {
+ 0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+ 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cover h1 { font-size: 3.5rem; }
+  .frame-kiri, .frame-kanan { width: 60px; }
+}

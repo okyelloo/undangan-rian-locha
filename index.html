@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Undangan Pernikahan Rian Paguci & Locha</title>
+  
+  <!-- Library -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MUSIC -->
+<audio id="bgm" loop><source src="assets/lagu.mp3" type="audio/mpeg"></audio>
+
+<!-- KUPU2 CONTAINER -->
+<div id="kupu-container"></div>
+
+<!-- FRAME BUNGA KIRI KAN -->
+<div class="frame-kiri"></div>
+<div class="frame-kanan"></div>
+
+<!-- 1. COVER -->
+<section id="cover" class="cover">
+  <div class="cover-content text-center text-white">
+    <p class="subjudul" data-aos="fade-down">The Wedding Of</p>
+    <h1 data-aos="zoom-in" data-aos-delay="300">Rian & Locha</h1>
+    <p data-aos="fade-up" data-aos-delay="600">Minggu, 18 Januari 2027</p>
+    <button onclick="bukaUndangan()" class="btn-buka" data-aos="fade-up" data-aos-delay="900">
+      💌 Buka Undangan
+    </button>
+  </div>
+</section>
+
+<!-- 2. KONTEN UTAMA -->
+<div id="konten" class="konten">
+
+  <!-- HERO + COUNTDOWN -->
+  <section class="hero text-center py-5">
+    <h2 data-aos="fade-up">Menuju Hari Bahagia</h2>
+    <div id="countdown" class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="200"></div>
+  </section>
+
+  <!-- MEMPELAI -->
+  <section class="mempelai container py-5">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4 text-center mb-4" data-aos="fade-right">
+        <img src="assets/foto-pria.jpg" class="foto-bulat">
+        <h3>Rian Paguci</h3>
+        <p>Putra dari Bapak Supratman & Ibu Paini</p>
+      </div>
+      <div class="col-md-1 text-center mb-4" data-aos="zoom-in"><h2>&</h2></div>
+      <div class="col-md-4 text-center mb-4" data-aos="fade-left">
+        <img src="assets/foto-wanita.jpg" class="foto-bulat">
+        <h3>Locha</h3>
+        <p>Putri dari Bapak Joko & Ibu Dewi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACARA -->
+  <section class="acara container py-5">
+    <h3 class="text-center mb-5" data-aos="fade-up">Detail Acara</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-5 mb-4" data-aos="fade-right">
+        <div class="card-acara text-center p-4">
+          <h4>Akad Nikah</h4>
+          <p>Minggu, 18 Januari 2027<br>08.00 WIB<br>Masjid Agung Bengkulu</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-maps">📍 Lihat Lokasi</a>
+        </div>
+      </div>
+      <div class="col-md-5 mb-4" data-aos="fade-left">
+        <div class="card-acara text-center p-4">
+          <h4>Resepsi</h4>
+          <p>Minggu, 18 Januari 2027<br>11.00 WIB - Selesai<br>Gedung Balai Buntar</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-maps">📍 Lihat Lokasi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SWIPER -->
+  <section class="gallery py-5">
+    <h3 class="text-center mb-5" data-aos="fade-up">Our Gallery</h3>
+    <div class="swiper mySwiper" data-aos="zoom-in">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/gallery1.jpg"></div>
+        <div class="swiper-slide"><img src="assets/gallery2.jpg"></div>
+        <div class="swiper-slide"><img src="assets/gallery3.jpg"></div>
+        <div class="swiper-slide"><img src="assets/gallery4.jpg"></div>
+        <div class="swiper-slide"><img src="assets/gallery5.jpg"></div>
+        <div class="swiper-slide"><img src="assets/gallery6.jpg"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- LOVE STORY -->
+  <section class="love-story container py-5">
+    <h3 class="text-center mb-5" data-aos="fade-up">Love Story</h3>
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <h4>Pertama Ketemu - 2020</h4>
+        <p>Diawali dari satu kelas kuliah, tanpa sengaja duduk sebangku.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-left">
+        <h4>Lamaran - 2026</h4>
+        <p>Dengan restu orang tua, Aldi melamar Sinta di rumah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMPLOR DIGITAL -->
+  <section class="amplop container py-5 text-center">
+    <h3 data-aos="fade-up">Amplop Digital</h3>
+    <p data-aos="fade-up" data-aos-delay="200">Doa restu Anda sudah cukup. Tapi jika ingin memberi tanda kasih:</p>
+    <div class="card-rekening mx-auto mt-4" data-aos="zoom-in">
+      <p>BCA a.n Aldi Pratama</p>
+      <h4 id="noRek">1234567890</h4>
+      <button onclick="copyRek()" class="btn-copy">Copy No. Rekening</button>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp container py-5">
+    <h3 class="text-center mb-4" data-aos="fade-up">RSVP & Ucapan</h3>
+    <form id="rsvpForm" class="card-form p-4" data-aos="fade-up">
+      <input type="text" id="nama" placeholder="Nama Lengkap" required>
+      <select id="kehadiran" required>
+        <option value="">Pilih Kehadiran</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+      </select>
+      <textarea id="ucapan" placeholder="Ucapan & Doa" rows="3"></textarea>
+      <button type="submit">Kirim Ucapan</button>
+    </form>
+    <p id="notif" class="text-center mt-3"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center py-5">
+    <p>Merupakan suatu kehormatan & kebahagiaan bagi kami</p>
+    <h3>Aldi & Sinta</h3>
+    <small>© 2027 Dibuat dengan ❤️</small>
+  </footer>
+
+</div>
+
+<!-- JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
